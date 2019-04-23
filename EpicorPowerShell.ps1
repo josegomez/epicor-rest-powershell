@@ -11,7 +11,7 @@ $uri = "https://YourEpicorServer.TLD/EpicorProduction/api/v1/BaqSvc/zCustomer01/
 $secpasswd = ConvertTo-SecureString $pass -AsPlainText -Force
 
 #Create Credential
-$cred = New-Object System.Management.Automation.PSCredential ($pass, $secpasswd)
+$cred = New-Object System.Management.Automation.PSCredential ($user, $secpasswd)
 
 #Rest Call
 $data = Invoke-RestMethod $uri -Method Get -Credential $cred -ContentType "Applicatin/Json"
